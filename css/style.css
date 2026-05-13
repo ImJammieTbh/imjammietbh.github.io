@@ -241,6 +241,33 @@ section h2 {
   border-radius: 5px;
 }
 
+.project-sublevel {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.project-tech {
+  display: inline;
+  text-align: left;
+  width: 360px;
+}
+
+.project-tech p {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+.project-link {
+  width: 360px;
+  text-align: right;
+}
+
+.project-link a {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
 /* Footer */
 footer {
   text-align: center;
