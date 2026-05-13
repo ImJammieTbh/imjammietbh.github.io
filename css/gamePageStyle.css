@@ -1,0 +1,64 @@
+/* =========================
+   PROJECT PAGE ONLY STYLES
+   ========================= */
+
+.project-page {
+  padding-top: 120px;
+}
+
+/* Back button */
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Title */
+.project-title {
+  font-family: ClashDisplay-Bold, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.project-description {
+  max-width: 700px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* Game embed container */
+.game-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.game-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Project info card (reuses your style vibe) */
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Optional override for better spacing consistency */
+.project-card h2 {
+  margin-bottom: 10px;
+}

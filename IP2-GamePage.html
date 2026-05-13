@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2 | Unity Game</title>
+
+  <link rel="stylesheet" href="css/mainPageStyle.css">
+  <link rel="stylesheet" href="css/gamePageStyle.css">
+</head>
+
+<body>
+
+<!-- Navbar (same as main site) -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <div class="logo">Portfolio</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section style="padding-top: 120px;">
+
+  <div class="container">
+
+    <!-- Back link -->
+    <div style="margin-bottom: 20px;">
+      <a href="index.html" class="back-link" style="text-align:left;">
+        ← Back to Portfolio
+      </a>
+    </div>
+
+    <!--PROJECT HEADER BOX-->
+    <div class="project">
+
+      <h1 style="font-family: ClashDisplay-Bold, sans-serif; margin-bottom: 10px;">
+        Shoot That Bird - Unity Game
+      </h1>
+
+      <p>
+        This Unity WebGL project demonstrates gameplay systems, physics interaction,
+        and level design built using C# in Unity.
+      </p>
+
+    </div>
+
+    <!-- GAME BOX -->
+    <div class="project">
+
+      <h2>Play the Game</h2>
+
+      <!-- Wrapper -->
+      <div style="width: 100%; aspect-ratio: 16 / 9; margin-top: 15px; position: relative; background:#111;">
+
+        <!-- Play button overlay -->
+        <div id="startScreen" style="
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      background:rgba(0,0,0,0.85);
+      color:white;
+      z-index:10;
+    ">
+          <button onclick="loadGame()" style="
+        padding:12px 24px;
+        font-size:18px;
+        cursor:pointer;
+      ">
+            ▶ Play Game
+          </button>
+        </div>
+
+        <!-- Loading screen -->
+        <div id="loadingScreen" style="
+      position:absolute;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,0.85);
+      color:white;
+      z-index:9;
+    ">
+          Loading...
+        </div>
+
+        <!-- Fullscreen button -->
+        <button id="fsBtn" onclick="toggleFullscreen()" style="
+      position:absolute;
+      top:10px;
+      right:10px;
+      z-index:20;
+      display:none;
+      padding:6px 10px;
+      cursor:pointer;
+    ">
+          ⛶ Fullscreen
+        </button>
+
+        <!-- Game container -->
+        <div id="gameContainer" style="width:100%; height:100%;"></div>
+
+      </div>
+    </div>
+
+    <!--ABOUT BOX-->
+    <div class="project">
+
+      <h2>About this project</h2>
+
+      <p>
+        Here you can explain what you built, mechanics you implemented,
+        problems you solved, and what you learned while developing the game.
+      </p>
+
+      <div class="project-sublevel">
+
+        <div class="project-tech">
+          <p>Unity, C#, WebGL</p>
+        </div>
+
+        <div class="repo-link">
+          <a href="https://github.com/ImJammieTbh/imjammietbh.github.io" target="_blank">
+            GitHub Repository
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2025 - Jamie Veitch</p>
+</footer>
+
+<script>
+  let gameLoaded = false;
+
+  function loadGame() {
+    document.getElementById("startScreen").style.display = "none";
+    document.getElementById("loadingScreen").style.display = "flex";
+
+    const container = document.getElementById("gameContainer");
+
+    const iframe = document.createElement("iframe");
+    iframe.src = "webBuilds/ShootThatBird/_build-web/index.html";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.allow = "fullscreen";
+
+    iframe.onload = () => {
+      document.getElementById("loadingScreen").style.display = "none";
+      document.getElementById("fsBtn").style.display = "block";
+    };
+
+    container.appendChild(iframe);
+    gameLoaded = true;
+  }
+
+  function toggleFullscreen() {
+    const container = document.getElementById("gameContainer");
+
+    if (!document.fullscreenElement) {
+      container.requestFullscreen?.();
+    } else {
+      document.exitFullscreen?.();
+    }
+  }
+</script>
+
+</body>
+</html>

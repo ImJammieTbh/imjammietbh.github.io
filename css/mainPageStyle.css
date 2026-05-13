@@ -11,7 +11,7 @@
 
 /* Body */
 body {
-  background-color: #f4f4f4;
+  background-color: #e4e4e4;
   color: #333;
   line-height: 1.6;
 
@@ -202,7 +202,7 @@ section h2 {
 
 /* Each box */
 .skill-box {
-  background-color: white;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -239,6 +239,7 @@ section h2 {
   padding: 20px;
   margin-bottom: 15px;
   border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .project-sublevel {
@@ -250,22 +251,32 @@ section h2 {
 .project-tech {
   display: inline;
   text-align: left;
-  width: 360px;
+  width: 240px;
 }
 
 .project-tech p {
-  color: #aaa;
-  font-size: 0.8rem;
+  color: #6a6a6a;
+  font-size: 0.85rem;
 }
 
-.project-link {
-  width: 360px;
+.project-page {
+  text-align: center;
+  width: 240px;
+}
+
+.project-page a {
+  color: #6a6a6a;
+  font-size: 0.85rem;
+}
+
+.repo-link {
+  width: 240px;
   text-align: right;
 }
 
-.project-link a {
-  color: #aaa;
-  font-size: 0.8rem;
+.repo-link a {
+  color: #6a6a6a;
+  font-size: 0.85rem;
 }
 
 /* Footer */
