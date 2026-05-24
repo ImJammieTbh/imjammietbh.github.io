@@ -70,7 +70,7 @@
             <img src="img/server.png" alt="Server Icon">
             <h3>Backend</h3>
           </div>
-          <p>C#</p>
+          <p>C#, Node.js, JavaScript</p>
         </div>
 
         <div id="skill3" class="skill-box">
@@ -108,6 +108,8 @@
           to showcase projects, skills, and contact information, with a focus on clean design,
           interactivity, and user experience.</p>
 
+        <p class="devState"><i class="ti ti-brand-github"></i> Ongoing project — actively in development</p>
+
       </div>
 
       <div class="project" id="IP2-UnityProject">
@@ -130,11 +132,136 @@
         <p>Within university created a game with a group of peers. I built the bird systems
           along with integrating all the build systems to function together.</p>
 
+        <p class="devState"><i class="ti ti-brand-github"></i> Archived project - no expected changes</p>
+
       </div>
 
       <div class="project" id="Twitch-ChatBot">
 
+        <div class="project-header">
+          <div>
+            <h3>Twitch Chatbot</h3>
+            <div class="project-tech">
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>Twitch API</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ImJammieTbh/TwitchBot" target="_blank">Github Repository<i class="ti ti-external-link" style="vertical-align: -1px; padding-left: 2px;"></i></a>
+          </div>
+        </div>
 
+        <p>A Node.js Twitch chatbot that monitors a list of streamers and automatically joins their chat when they go live. Listens for <code>!</code> commands in real time and responds per command via the Twitch API.</p>
+
+        <p class="demo-label">Live demo</p>
+
+        <style>
+          .demo-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #888; margin-bottom: 8px; }
+          .twitch-demo { background: #18181b; border-radius: 8px; overflow: hidden; font-family: inherit; max-width: 100%;}
+          .twitch-demo .td-header { background: #0e0e10; padding: 8px 14px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #2a2a2d; }
+          .twitch-demo .td-live { background: #e91916; color: #fff; font-size: 11px; font-weight: 500; padding: 1px 7px; border-radius: 3px; }
+          .twitch-demo .td-channel { color: #efeff1; font-size: 13px; font-weight: 500; }
+          .twitch-demo .td-viewers { color: #adadb8; font-size: 12px; margin-left: auto; display: flex; align-items: center; gap: 3px; }
+          .twitch-demo .td-messages { height: 200px; overflow-y: auto; padding: 10px 14px; display: flex; flex-direction: column; gap: 5px; scrollbar-width: thin; scrollbar-color: #3a3a4a transparent; }
+          .twitch-demo .td-msg { font-size: 13px; line-height: 1.5; word-break: break-word; }
+          .twitch-demo .td-msg .td-user { font-weight: 500; margin-right: 4px; }
+          .twitch-demo .td-msg .td-text { color: #efeff1; }
+          .twitch-demo .td-hints { background: #0e0e10; padding: 6px 14px; display: flex; gap: 6px; flex-wrap: wrap; border-top: 1px solid #2a2a2d; border-bottom: 1px solid #2a2a2d; align-items: center; }
+          .twitch-demo .td-hints span { font-size: 11px; color: #6e6e80; }
+          .twitch-demo .td-hint-btn { background: #2a2a2d; color: #adadb8; border: none; border-radius: 4px; padding: 3px 8px; font-size: 11px; font-family: monospace; cursor: pointer; }
+          .twitch-demo .td-hint-btn:hover { background: #3a3a4a; color: #efeff1; }
+          .twitch-demo .td-input-row { background: #0e0e10; padding: 8px 10px; display: flex; gap: 8px; }
+          .twitch-demo .td-input-row input { flex: 1; background: #2a2a2d; border: none; border-radius: 4px; padding: 7px 10px; color: #efeff1; font-size: 13px; outline: none; }
+          .twitch-demo .td-input-row input::placeholder { color: #6e6e80; }
+          .twitch-demo .td-input-row button { background: #9147ff; color: #fff; border: none; border-radius: 4px; padding: 7px 12px; font-size: 13px; cursor: pointer; }
+          .twitch-demo .td-input-row button:hover { background: #7d3fd4; }
+        </style>
+
+        <div class="twitch-demo">
+          <div class="td-header">
+            <span class="td-live">LIVE</span>
+            <span class="td-channel">imjammietbh</span>
+            <span class="td-viewers"><i class="ti ti-users" style="font-size:13px"></i> 42</span>
+          </div>
+          <div class="td-messages" id="td-msgs"></div>
+          <div class="td-hints">
+            <span>try:</span>
+            <button class="td-hint-btn" onclick="tdTry('!hello')">!hello</button>
+            <button class="td-hint-btn" onclick="tdTry('!jcbday')">!jcbday</button>
+            <button class="td-hint-btn" onclick="tdTry('!welcomeback')">!welcomeback</button>
+            <button class="td-hint-btn" onclick="tdTry('!peen')">!peen</button>
+          </div>
+          <div class="td-input-row">
+            <input id="td-input" placeholder="Send a message" maxlength="200" onkeydown="if(event.key==='Enter')tdSend()" />
+            <button onclick="tdSend()">Chat</button>
+          </div>
+        </div>
+
+        <p class="devState"><i class="ti ti-brand-github"></i> Ongoing project — actively in development</p>
+
+        <script>
+          (function() {
+            const COLORS = ['#ff6b6b','#ffa94d','#69db7c','#4dabf7','#da77f2','#f783ac','#63e6be','#74c0fc'];
+            const myColor = COLORS[Math.floor(Math.random() * COLORS.length)];
+
+            function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+            function tdAdd(user, color, text) {
+              const box = document.getElementById('td-msgs');
+              const d = document.createElement('div');
+              d.className = 'td-msg';
+              d.innerHTML = '<span class="td-user" style="color:' + color + '">' + esc(user) + ':</span><span class="td-text"> ' + esc(text) + '</span>';
+              box.appendChild(d);
+              box.scrollTop = box.scrollHeight;
+            }
+
+            const seed = [
+              ['MakingThatDev', '#9147ff', 'Welcome! Try a command using the buttons above 👋'],
+              ['viewer123', '#ffa94d', '!hello'],
+              ['MakingThatDev', '#9147ff', '@viewer123, heya!!!'],
+              ['xX_gamer_Xx', '#63e6be', 'PogChamp'],
+            ];
+            seed.forEach(function(m, i) { setTimeout(function() { tdAdd(m[0], m[1], m[2]); }, i * 200); });
+
+            const cmds = {
+              hello: function(u) { return '@' + u + ', heya!!!'; },
+              hi: function(u) { return '@' + u + ', heya!!!'; },
+              peen: function(u) { return '@' + u + ', noice peen 8===============D'; },
+              welcomeback: function() { return 'Welcome back to the Cult!!!'; },
+              weba: function() { return 'Welcome back to the Cult!!!'; },
+              jcbday: function() {
+                var t = new Date(); t.setHours(0,0,0,0);
+                var b = new Date(t.getFullYear(), 4, 9);
+                if (b < t) b.setFullYear(t.getFullYear() + 1);
+                var d = Math.floor((b - t) / 86400000);
+                return d === 0 ? 'Wooooooooo, Happy Fucking Birthday JC!' : d + " days until JC's birthday";
+              },
+              bday: function() { return cmds.jcbday(); },
+              birthday: function() { return cmds.jcbday(); },
+            };
+
+            window.tdSend = function() {
+              var inp = document.getElementById('td-input');
+              var txt = inp.value.trim();
+              if (!txt) return;
+              tdAdd('You', myColor, txt);
+              inp.value = '';
+              if (txt.startsWith('!')) {
+                var cmd = txt.trim().split(' ')[0].slice(1).toLowerCase();
+                setTimeout(function() {
+                  tdAdd('MakingThatDev', '#9147ff', cmds[cmd] ? cmds[cmd]('You') : 'Unknown command. Try !hello, !jcbday, !welcomeback or !peen');
+                }, 300);
+              }
+            };
+
+            window.tdTry = function(c) {
+              var i = document.getElementById('td-input');
+              i.value = c;
+              i.focus();
+            };
+          })();
+        </script>
 
       </div>
     </div>
@@ -155,12 +282,6 @@
   </div>
 </section>
 <!--endregion-->
-
-<!-- Old Contact Section -->
-<!--<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: yourname@email.com</p>
-</section>-->
 
 <!-- Footer -->
 <footer>

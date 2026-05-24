@@ -1,0 +1,4 @@
+Monitors Twitch's API for streamers going live and automatically joins their chat, then listens and responds to user commands in real time
+- this is for the description of the twitch chat bot
+
+A Node.js Twitch chatbot that monitors streamers and auto-joins their chat when they go live, responding to custom commands in real time via the Twitch API.
