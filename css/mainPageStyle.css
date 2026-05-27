@@ -352,4 +352,9 @@ footer {
   .skill-box p {
     font-size: 0.95rem;
   }
+
+  button {
+    color: inherit;
+    -webkit-appearance: none;
+  }
 }

@@ -6,6 +6,7 @@
   <title>Jamie Veitch | Portfolio</title>
   <link rel="stylesheet" href="css/mainPageStyle.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/projects-layout.css">
 </head>
 <body>
 
@@ -90,69 +91,82 @@
 
       <div class="project" id="portfolio-website">
 
-        <div class="project-header">
-          <div>
-            <h3>Portfolio Website</h3>
-            <div class="project-tech">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
+        <div class="project-info">
+          <div class="project-header">
+            <div>
+              <h3>Portfolio Website</h3>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ImJammieTbh/imjammietbh.github.io" target="_blank">Github <i
+                class="ti ti-external-link" style="vertical-align: -1px; padding-left: 2px;"></i></a>
             </div>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/ImJammieTbh/imjammietbh.github.io" target="_blank">Github <i class="ti ti-external-link" style="vertical-align: -1px; padding-left: 2px;"></i></a>
-          </div>
+
+          <p>Built a responsive personal portfolio website using HTML, CSS, and JavaScript
+            to showcase projects, skills, and contact information, with a focus on clean design,
+            interactivity, and user experience.</p>
+
+          <p class="devState"><i class="ti ti-brand-github"></i> Ongoing project — actively in development</p>
         </div>
-
-        <p>Built a responsive personal portfolio website using HTML, CSS, and JavaScript
-          to showcase projects, skills, and contact information, with a focus on clean design,
-          interactivity, and user experience.</p>
-
-        <p class="devState"><i class="ti ti-brand-github"></i> Ongoing project — actively in development</p>
 
       </div>
 
       <div class="project" id="IP2-UnityProject">
 
-        <div class="project-header">
-          <div>
-            <h3>Integrated Project 2</h3>
-            <div class="project-tech">
-              <span>C#</span>
-              <span>Unity</span>
-              <span>Shaders</span>
+        <div class="project-info">
+          <div class="project-header">
+            <div>
+              <h3>Integrated Project 2</h3>
+              <div class="project-tech">
+                <span>C#</span>
+                <span>Unity</span>
+                <span>Shaders</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="IP2-GamePage.html">Game Demo <i class="ti ti-external-link"
+                                                       style="vertical-align: -1px; padding-left: 2px;"></i></a>
+              <a href="https://github.com/ImJammieTbh/IP2-Group6" target="_blank">Github <i class="ti ti-external-link"
+                                                                                            style="vertical-align: -1px; padding-left: 2px;"></i></a>
             </div>
           </div>
-          <div class="project-links">
-            <a href="IP2-GamePage.html">Game Demo <i class="ti ti-external-link" style="vertical-align: -1px; padding-left: 2px;"></i></a>
-            <a href="https://github.com/ImJammieTbh/IP2-Group6" target="_blank">Github <i class="ti ti-external-link" style="vertical-align: -1px; padding-left: 2px;"></i></a>
-          </div>
+
+          <p>Within university created a game with a group of peers. I built the bird systems
+            along with integrating all the build systems to function together.</p>
+
+          <p class="devState"><i class="ti ti-brand-github"></i> Archived project - no expected changes</p>
         </div>
-
-        <p>Within university created a game with a group of peers. I built the bird systems
-          along with integrating all the build systems to function together.</p>
-
-        <p class="devState"><i class="ti ti-brand-github"></i> Archived project - no expected changes</p>
 
       </div>
 
-      <div class="project" id="Twitch-ChatBot">
+      <div class="project" id="Twitch-ChatBot" data-featured>
 
-        <div class="project-header">
-          <div>
-            <h3>Twitch Chatbot</h3>
-            <div class="project-tech">
-              <span>JavaScript</span>
-              <span>Node.js</span>
-              <span>Twitch API</span>
+        <div class="project-info">
+          <div class="project-header">
+            <div>
+              <h3>Twitch Chatbot</h3>
+              <div class="project-tech">
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>Twitch API</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ImJammieTbh/TwitchBot" target="_blank">Github <i class="ti ti-external-link"
+                                                                                           style="vertical-align: -1px; padding-left: 2px;"></i></a>
             </div>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/ImJammieTbh/TwitchBot" target="_blank">Github <i class="ti ti-external-link" style="vertical-align: -1px; padding-left: 2px;"></i></a>
-          </div>
-        </div>
 
-        <p>A Node.js Twitch chatbot that monitors a list of streamers and automatically joins their chat when they go live. Listens for <code>!</code> commands in real time and responds per command via the Twitch API.</p>
+          <p>A Node.js Twitch chatbot that monitors a list of streamers and automatically joins their chat when they go
+            live. Listens for <code>!</code> commands in real time and responds per command via the Twitch API.</p>
+
+          <p class="devState"><i class="ti ti-brand-github"></i> Ongoing project — actively in development</p>
+        </div>
 
         <p class="demo-label">Live demo</p>
 
@@ -197,8 +211,6 @@
             <button onclick="tdSend()">Chat</button>
           </div>
         </div>
-
-        <p class="devState"><i class="ti ti-brand-github"></i> Ongoing project — actively in development</p>
 
         <script>
           (function() {
@@ -288,6 +300,7 @@
   <p>© 2025 - Jamie Veitch</p>
 </footer>
 
+<script src="js/projectsLayout.js"></script>
 <script src="js/mainPageScript.js"></script>
 </body>
 </html>
