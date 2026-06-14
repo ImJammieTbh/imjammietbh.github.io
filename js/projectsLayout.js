@@ -1,5 +1,5 @@
 // ─── Google Sheets config ────────────────────────────────────────────────────
-const SPREADSHEET_ID = '1vR9dzJQQb17tPhRjIWfyUNnf9YA_Oaio0Z_izb0r2sBZlPh-SVLUxHtfmdsEEtwu65V5kwjmi1PfCVj';
+const SPREADSHEET_ID = '1IJgDgpNu5zkGr5vN_HxWJ3Gs13S5jXM4v69QJ27HE1s';
 const API_KEY        = 'AIzaSyAbJAsD9OixpXaikp411pSyRPdJV8Ie5a0';
 const RANGE          = 'Sheet1!A:B';
 const POLL_INTERVAL  = 5000;
