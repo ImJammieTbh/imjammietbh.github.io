@@ -272,6 +272,150 @@ section h2 {
   text-decoration: underline;
 }
 
+/* Twitch Demo Widget */
+.demo-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.twitch-demo {
+  background: #18181b;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: inherit;
+  max-width: 100%;
+}
+
+.twitch-demo .td-header {
+  background: #0e0e10;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #2a2a2d;
+}
+
+.twitch-demo .td-live {
+  background: #e91916;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 1px 7px;
+  border-radius: 3px;
+}
+
+.twitch-demo .td-channel {
+  color: #efeff1;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.twitch-demo .td-viewers {
+  color: #adadb8;
+  font-size: 12px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.twitch-demo .td-messages {
+  height: 200px;
+  overflow-y: auto;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a4a transparent;
+}
+
+.twitch-demo .td-msg {
+  font-size: 13px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.twitch-demo .td-msg .td-user {
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.twitch-demo .td-msg .td-text {
+  color: #efeff1;
+}
+
+.twitch-demo .td-hints {
+  background: #0e0e10;
+  padding: 6px 14px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  border-top: 1px solid #2a2a2d;
+  border-bottom: 1px solid #2a2a2d;
+  align-items: center;
+}
+
+.twitch-demo .td-hints span {
+  font-size: 11px;
+  color: #6e6e80;
+}
+
+.twitch-demo .td-hint-btn {
+  background: #2a2a2d;
+  color: #adadb8;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.twitch-demo .td-hint-btn:hover {
+  background: #3a3a4a;
+  color: #efeff1;
+}
+
+.twitch-demo .td-input-row {
+  background: #0e0e10;
+  padding: 8px 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.twitch-demo .td-input-row input {
+  flex: 1;
+  background: #2a2a2d;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 10px;
+  color: #efeff1;
+  font-size: 13px;
+  outline: none;
+}
+
+.twitch-demo .td-input-row input::placeholder {
+  color: #6e6e80;
+}
+
+.twitch-demo .td-input-row button {
+  background: #9147ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.twitch-demo .td-input-row button:hover {
+  background: #7d3fd4;
+}
+
 .devState { font-size: 12px; color: #888; display: flex; align-items: center; gap: 5px; padding-top: 10px;}
 /*notes*/
 
