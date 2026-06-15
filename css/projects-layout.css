@@ -29,6 +29,11 @@
   align-self: start;
 }
 
+/* Pin all non-demo content to the left column */
+.project-featured.has-demo > .project > :not(.twitch-demo):not([class*="demo"]) {
+  grid-column: 1;
+}
+
 /* Sub-grid for non-featured projects */
 .projects-grid {
   display: grid;
@@ -48,7 +53,9 @@
     grid-template-columns: 1fr;
   }
 
-  .project-featured.has-demo > .project > .twitch-demo {
+  .project-featured.has-demo > .project > .twitch-demo,
+  .project-featured.has-demo > .project > [class*="demo"] {
     grid-column: 1;
+    grid-row: auto; /* ← this is the key fix for mobile */
   }
 }
