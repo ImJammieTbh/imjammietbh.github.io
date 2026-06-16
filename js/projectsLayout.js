@@ -1,9 +1,8 @@
-// ─── Google Sheets config ────────────────────────────────────────────────────
+//polling info
 const SPREADSHEET_ID = '1IJgDgpNu5zkGr5vN_HxWJ3Gs13S5jXM4v69QJ27HE1s';
 const API_KEY        = 'AIzaSyAbJAsD9OixpXaikp411pSyRPdJV8Ie5a0';
 const RANGE          = 'Sheet1!A:B';
 const POLL_INTERVAL  = 5000;
-// ─────────────────────────────────────────────────────────────────────────────
 
 let currentFeaturedId = null;
 let projectNodes      = [];
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const initialFeatured = projectNodes.find(p => p.hasAttribute('data-featured'));
   if (initialFeatured) currentFeaturedId = initialFeatured.id;
 
-  // Build layout DOM once — never destroy it
+  //Build layout DOM once never destroy it, so no style issues happen
   layoutWrapper  = document.createElement('div');
   layoutWrapper.className = 'projects-layout';
 
@@ -53,10 +52,10 @@ async function pollSheet() {
     const data = await res.json();
     const rows = data.values || [];
 
-    // Skip header row, find whichever row has TRUE in column B
+    //Skip header row
     let newFeaturedId = null;
     rows.slice(1).forEach(row => {
-      const id       = (row[0] || '').trim();
+      const id = (row[0] || '').trim();
       const featured = (row[1] || '').trim().toUpperCase();
       if (featured === 'TRUE') newFeaturedId = id;
     });
